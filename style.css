@@ -54,7 +54,7 @@ div#cabecalho > p {
     font-weight: normal;
 }
 menu {
-    display: block;
+    display: none;
 }
 menu > ul {
     list-style-type: none;
