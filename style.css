@@ -14,6 +14,10 @@
     --cor4: #32A664;
     --cor6: #134429;
 }
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
 body {
     background-color: var(--cor3);
@@ -26,6 +30,19 @@ header {
     max-width: 100%;
     min-width: 320px;
 }
+span#burguer {
+    background-color: var(--cor6);
+    display: block;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+span#burguer:hover{
+    background-color: var(--cor3);
+    color: black;
+}
 div#cabecalho {
     text-align: center;
     color: white;
@@ -36,14 +53,22 @@ div#cabecalho > h1 {
 div#cabecalho > p {
     font-weight: normal;
 }
-nav > a {
+menu {
+    display: block;
+}
+menu > ul {
+    list-style-type: none;
+}
+menu  a {
+    display: block;
     text-decoration: none;
+    text-align: center;
     font-size: 20px;
     color: white;
     padding: 10px;
     transition-duration: 0.5s;
 }
-nav > a:hover {
+menu a:hover {
     color: var(--cor6);
     background-color: var(--cor3);
     border-radius: 5px;
@@ -52,7 +77,7 @@ main {
     display: block;
     margin: auto;
     max-width: 1000px;
-    min-width: 320px;
+    
     padding: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;

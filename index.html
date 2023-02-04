@@ -7,19 +7,24 @@
     <title>Mini Projeto</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <div id="cabecalho">
             <h1>CURIOSIDADES DE TECNOLOGIA</h1>
             <p>Tudo aquilo que você sempre quis saber sobre o mundo <br> Tech, em um único lugar.<p>
         </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Notícias</a>
-            <a href="#">Curiosidades</a>
-            <a href="#">Fale Conosco</a>
-        </nav>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+            </ul>
+        </menu>
     </header>
     <main>
         <h1>História do mascote do android</h1>
@@ -72,5 +77,21 @@
     <footer>
         <p>Rodapé</p>
     </footer>
+    <script>
+        function mudouTamanho(){
+            if(window.innerWidth >= 768){
+                menu.style.display = "block"
+            }else{
+                menu.style.display = "none"
+            }
+        }
+        function clickMenu(){
+            if (menu.style.display == "block"){
+                menu.style.display = "none"
+            }else{
+                menu.style.display = "block"
+            }
+        }
+    </script>
 </body>
 </html>
